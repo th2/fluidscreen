@@ -1602,3 +1602,11 @@ function hashCode (s) {
     }
     return hash;
 };
+
+function resplat() {
+    setTimeout(function () {
+        splatStack.push(1)
+        resplat();
+    }, parseInt(Math.random() * 400));
+}
+resplat();
